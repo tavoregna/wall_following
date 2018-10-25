@@ -1,0 +1,5 @@
+<launch>
+    <node name="wallFollowing" pkg="dem_wall_following" type="wallFollowing">
+        <param name="direction" value="1" />
+    </node>
+</launch>

@@ -1,0 +1,20 @@
+<launch>
+    <arg name="dir" default="1" />
+    <arg name="vel" default="0.5" />
+    <arg name="dis" default="0.24" />
+    <arg name="ex" default="0.0" />
+    <arg name="ey" default="0.0" />
+    <arg name="av" default="1" />
+    <arg name="fw" default="-1.0" />
+    <node name="wallFollowing" pkg="dem_wall_following" type="wallFollowing">
+        <param name="direction" value="$(arg dir)" />
+        <param name="linear_velocity" value="$(arg vel)" />
+        <param name="distance" value="$(arg dis)" />
+        <param name="endx" value="$(arg ex)" />
+        <param name="endy" value="$(arg ey)" />
+        <param name="avanti" value="$(arg av)" />
+        <param name="forwardwall" value="$(arg fw)" />
+        <param name="manipulator" value="0" />
+        <param name="abbassa" value="0" />
+    </node>
+</launch>
